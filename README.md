@@ -37,7 +37,7 @@ This repository contains the code and analysis for predicting monthly crime coun
 
 ## Data
 
-* **Source:** Kaggle
+* **Source:** Kaggle-Datasets
 * **Description:** Monthly crime counts in Calgary from January 2018 through June 2024.
 * **Format:** CSV file ('Community_Crime_Statistics_20240102.csv')
 
@@ -54,42 +54,35 @@ This repository contains the code and analysis for predicting monthly crime coun
    ```bash
    python3 -m venv venv
    source venv/bin/activate    # Linux/macOS
-   venv\\Scripts\\activate   # Windows
+   venv\Scripts\activate       # Windows
    pip install -r requirements.txt
    ```
 
 ## Usage
 
-1. **Data Preprocessing & EDA**:
+To run the full analysis, open the Jupyter Notebook:
 
-   ```bash
-   jupyter notebook notebooks/03_data_analysis.ipynb
-   ```
-2. **Training the Model**:
+```bash
+jupyter notebook "Calgary Crime Data Analysis and Neural  Network Prediction.ipynb"
+```
 
-   ```bash
-   python src/train_model.py --config configs/train_config.yaml
-   ```
-3. **Generating Predictions**:
+Inside the notebook, you'll find:
 
-   ```bash
-   python src/predict.py --input data/crime_monthly.csv --output results/predictions.csv
-   ```
+* Data loading and preprocessing
+* Exploratory Data Analysis (EDA)
+* Neural network model building
+* Model training and prediction
+* Final visualizations and evaluations
 
 ## Project Structure
 
 ```
-calgary-crime-prediction/
-├── data/                       # raw and processed data
-│   └── crime_monthly.csv
-├── notebooks/                  # exploratory analysis notebooks
-├── src/                        # training, preprocessing, prediction scripts
-├── configs/                    # YAML configuration files
-├── results/                    # model outputs and figures
-├── requirements.txt            # Python dependencies
-├── .gitignore                  # ignored files
-├──LICENSE                      # project license
-└── README.md                   # project overview
+Calgary-Crime-Data-Analysis-and-Neural-Network-Prediction/
+├── Calgary Crime Data Analysis and Neural  Network Prediction.ipynb  # Main notebook with all code
+├── crime_monthly.csv                                               # Input dataset
+├── requirements.txt                                                # Python dependencies
+├── README.md                                                       # Project overview
+└── .gitignore                                                      # Ignored files (optional)
 ```
 
 ## Methodology
@@ -97,21 +90,21 @@ calgary-crime-prediction/
 1. **Loading & Preprocessing**: Handle missing months, scale features.
 2. **Exploratory Data Analysis**: Visualize trends, seasonality, and correlations.
 3. **Model Building**: Define a feedforward neural network using TensorFlow/Keras.
-4. **Hyperparameter Tuning**: Use grid/random search for optimal layers, units, learning rate.
-5. **Training**: Early stopping, learning rate schedules.
-6. **Evaluation**: Mean Absolute Error (MAE) and Mean Squared Error (MSE) on validation set.
+4. **Hyperparameter Tuning**: Optimize architecture and learning rate.
+5. **Training**: Use early stopping, validation split.
+6. **Evaluation**: Mean Absolute Error (MAE) and Mean Squared Error (MSE).
 
 ## Results
 
 * **MAE:** 12.4 crimes per month
 * **MSE:** 245.7 (crimes²)
-* **Plots:** See `results/` for training curves and prediction vs. actual plots.
+* Visualizations and comparisons in the final notebook cells
 
 ## Model Architecture
 
-* Input layer: 3 features (month index, rolling mean, season indicator)
+* Input layer: Features like month index, rolling average
 * Hidden layers: \[64, 32] units with ReLU activations
-* Output layer: 1 unit (predicted crime count)
+* Output layer: 1 unit (predicted monthly crimes)
 
 ## Evaluation
 
@@ -122,9 +115,9 @@ calgary-crime-prediction/
 
 ## Future Work
 
-* Incorporate external covariates (weather, holidays).
-* Use LSTM/GRU for sequence modeling.
-* Deploy as a REST API with Docker/GitHub Actions.
+* Integrate weather or external factors
+* Try LSTM or GRU for time series modeling
+* Export the model for deployment
 
 ## Contributing
 
