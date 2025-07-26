@@ -37,9 +37,9 @@ This repository contains the code and analysis for predicting monthly crime coun
 
 ## Data
 
-* **Source:** City of Calgary Open Data Portal
+* **Source:** Kaggle
 * **Description:** Monthly crime counts in Calgary from January 2018 through June 2024.
-* **Format:** CSV file (`data/crime_monthly.csv`)
+* **Format:** CSV file ('Community_Crime_Statistics_20240102.csv')
 
 ## Installation
 
