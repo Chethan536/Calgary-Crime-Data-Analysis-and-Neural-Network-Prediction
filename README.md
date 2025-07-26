@@ -46,8 +46,8 @@ This repository contains the code and analysis for predicting monthly crime coun
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<your-username>/calgary-crime-prediction.git
-   cd calgary-crime-prediction
+   git clone https://github.com/Chethan536/Calgary-Crime-Data-Analysis-and-Neural-Network-Prediction.git
+   cd Calgary-Crime-Data-Analysis-and-Neural-Network-Prediction
    ```
 2. Create a virtual environment and install dependencies:
 
