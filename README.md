@@ -28,10 +28,8 @@ This repository contains the code and analysis for predicting monthly crime coun
 5. [Methodology](#methodology)
 6. [Results](#results)
 7. [Model Architecture](#model-architecture)
-8. [Evaluation](#evaluation)
-9. [Future Work](#future-work)
-10. [Contributing](#contributing)
-11. [License](#license)
+8. [Future Work](#future-work)
+9. [Contributing](#contributing)
 
 ---
 
@@ -96,8 +94,6 @@ Calgary-Crime-Data-Analysis-and-Neural-Network-Prediction/
 
 ## Results
 
-* **MAE:** 12.4 crimes per month
-* **MSE:** 245.7 (crimes²)
 * Visualizations and comparisons in the final notebook cells
 
 ## Model Architecture
@@ -105,13 +101,6 @@ Calgary-Crime-Data-Analysis-and-Neural-Network-Prediction/
 * Input layer: Features like month index, rolling average
 * Hidden layers: \[64, 32] units with ReLU activations
 * Output layer: 1 unit (predicted monthly crimes)
-
-## Evaluation
-
-| Metric | Validation Set |
-| ------ | -------------- |
-| MAE    | 12.4           |
-| MSE    | 245.7          |
 
 ## Future Work
 
@@ -123,6 +112,3 @@ Calgary-Crime-Data-Analysis-and-Neural-Network-Prediction/
 
 Contributions are welcome! Please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
